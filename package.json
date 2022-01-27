@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "name": "example",
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "acorn": "*",
+    "babel-jest": "*",
+    "css-parse": "*",
+    "jest": "*",
+    "jest-compact-reporter": "*",
+    "node-html-parser": "*"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "reporters": [
+      [
+        "jest-compact-reporter",
+        {
+          "diffs": false,
+          "colours": true,
+          "showPassingTests": true
+        }
+      ]
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {}
+      ]
+    ]
+  }
+}
