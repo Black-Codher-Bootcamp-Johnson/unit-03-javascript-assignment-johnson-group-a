@@ -4,7 +4,7 @@
       }
   
       body {
-        background-color: #47de5d;
+        background-color: rgb(197, 156, 163);
         font-family: helvetica, sans-serif;
       }
   
@@ -13,8 +13,8 @@
         max-width: 1200px;
         margin: 0 auto;
       }
-  
-      .timeline::after {
+
+      .timeline-item-title {
         content: '';
         position: absolute;
         width: 6px;
@@ -22,10 +22,10 @@
         top: 0;
         bottom: 0;
         left: 50%;
-        margin-left: -3px;
+        margin-left: -3px; 
       }
-  
-      .container {
+
+      .timeline-item-date {
         padding: 10px 40px;
         position: relative;
         width: 25px;
@@ -37,29 +37,29 @@
         border-radius: 50%;
         z-index: 1;
       }
-  
-      .left {
+
+      .timeline-item-summary {
         left:0;
       }
-  
-      .right {
+
+      .timeline-item-more-info {
         left:50%;
       }
-  
-      .left::before {
+
+      #modal-container {
         content: "";
         height: 0;
         position: absolute;
         top: 22px;
         width: 0;
         z-index: 1;
-        right: 30px;
+        right: 30px; 
         border: medium solid;
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent transparent white;
       }
-  
-      .rigt::before {
+
+      #modal-title {
         content: "";
         height: 0;
         position: absolute;
@@ -71,37 +71,38 @@
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;
       }
-  
-      .right::after {
+
+      #modal-date {
         left: -16px;
       }
-  
-      .content {
+
+      #modal-image {
         padding: 20px 30px;
         background-color: white;
         position: relative;
         border-radius: 6px;
       }
-  
-      @media screen and (max-width: 600px) {
-        .timeline::after {
-          left: 31px;
-        }
-      }
-  
-      .container {
+
+      #modal-full-description {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
       }
-  
-      .container::befire {
+
+      #modal-close-button {
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        border-radius: 6px;   
+      }
+
+      #modal-container::before {
         left: 60px;
         border: medium solid white;
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;
       }
-  
+
       .left::after, .right::after {
         left: 15px;
       }
@@ -109,4 +110,22 @@
       .right {
         left: 0%;
       }
+
+      @media screen and (max-width: 600px) {
+        .timeline::after {
+          left: 31px;
+        }
+      }
+  
+      /* .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      } */
+  
+     
+  
+     
     
+   
+     
