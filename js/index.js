@@ -1,55 +1,43 @@
 
 import dates from "./data.js"
 
-const modalcontainer = document.createElement("div")
-modalcontainer.id="modal-container"
-modalcontainer.className="modal"
-modalcontainer.className="hidden"
-const modaldate = document.createElement("span")
-modaldate.id="modal-date"
+function openModal() {
+    const modal = document.createElement("div");
+    modal.id = "modal-container";
+    newDiv.appendChild(modal);
 
-const modaltitle = document.createElement("span")
-modaltitle.id="modal-title"
+    const date = document.createElement("h3");
+    date.id = "modal-date";
+    date.textContent = dates[i].date;
+    modal.appendChild(date);
 
-const modalimage = document.createElement("img")
-modalimage.id="modal-image"
+    const title = document.createElement("h2");
+    title.id = "modal-title";
+    title.textContent = dates[i].title;
+    modal.appendChild(title);
 
-const modaldescription = document.createElement("p")
-modaldescription.id="modal-full-description"
+    const image = document.createElement("img");
+    image.id ="modal-image";
+    image.src = dates[i].image;
+    modal.appendChild(image);
 
-const modalbutton = document.createElement("button")
-modalbutton.addEventListener ("click", closeModal)
-
-modalbutton.id="modal-close-button"
-modalbutton.textContent = "Close"
-
-modalcontainer.appendChild(modaldate)
-modalcontainer.appendChild(modaltitle)
-modalcontainer.appendChild(modalimage)
-modalcontainer.appendChild(modaldescription)
-document.body.appendChild(modalcontainer)
-const openModalElement=document.querySelector(".timeline-item-more-info")
-.addEventListener("click", openModal )
+    const info = document.createElement("p");
+    info.id = "modal-full-description";
+    info.textContent = dates[i].fullDescription;
+    modal.appendChild(info);
 
 
-function openModal(){
-    modalcontainer.classList.remove("hidden")
-    modalcontainer.classList.remove("hidden");
+    const closeButton = document.createElement("button");
+    closeButton.id ="modal-close-button";
+    closeButton.textContent ="Close";
+    modal.appendChild(closeButton);
+    closeButton.addEventListener("click", closeModal);
 
-}
-function closeModal(){
-    modalcontainer.classList.add("hidden")
-    modalcontainer.classList.add("hidden");
-
-}
-
-
-
-
-
-
-
-
+    function closeModal() {
+        newDiv.removeChild(modal)
+    }
+        
+    }
 
 for (let i = 0; i < dates.length; i++) {
     const timeline = document.querySelector(".timeline");
@@ -82,5 +70,7 @@ for (let i = 0; i < dates.length; i++) {
     openButton.setAttribute("class" ,"time-timeline-more-info");
     openButton.textContent = "More Info";
     newDiv.appendChild(openButton);
+
+   
 }
 
