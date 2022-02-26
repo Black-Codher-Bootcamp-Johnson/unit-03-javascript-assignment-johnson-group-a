@@ -23,11 +23,58 @@ dates.map((item)=> {
     const summaryElement = document.createElement("p");
     summaryElement.classList.add("timeline-item-summary");
     summaryElement.textContent = item.summary
+
     const moreInfo = document.createElement("button");
     summaryElement.classList.add("timeline-item-more");
-    moreInfo.textContent = "READMORE"
+    moreInfo.textContent = "READ MORE"
+
+    moreInfo.addEventListener('click', function () {
+        openModal(item)
+    })
+
     card.append(titleElement, dateElement, summaryElement, moreInfo);
 })
+
+function openModal(item){
+    // container
+    const modalContainer = document.createElement('div')
+    modalContainer.id = 'modal-container'
+
+    const modalTitleElement = document.createElement('h2')
+    modalTitleElement.id = 'modal-title'
+    modalTitleElement.textContent = item.title
+    modalContainer.append(modalTitleElement)
+    
+    const modalDateElement = document.createElement('p')
+    modalDateElement.id = 'modal-date'
+    modalDateElement.textContent = item.date
+    modalContainer.append(modalDateElement)
+
+    const modalFullDescriptionElement = document.createElement('p')
+    modalFullDescriptionElement.id = 'modal-full-description'
+    modalFullDescriptionElement.textContent = item.fullDescription
+    modalContainer.append(modalFullDescriptionElement)
+
+
+    const modalImageElement = document.createElement('img')
+    modalImageElement.id = 'modal-image'
+    modalImageElement.setAttribute("src", item.image);
+    modalContainer.append(modalImageElement)
+
+    const modalClose = document.createElement('button')
+    modalClose.id ='modal-close-button'
+    modalClose.textContent = 'close'
+    modalClose.addEventListener('click', function(){
+        modalContainer.remove()
+    })
+    modalContainer.append(modalClose)
+
+    timeline.appendChild(modalContainer)
+}
+
+
+    // imageElement.setAttribute("src", image);
+
 /**
  *       <div class="timeline-item">
           <h2 class="timeline-item-title"></h2>
