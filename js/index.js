@@ -11,6 +11,7 @@ dates.map((item)=> {
     titleElement.textContent = item.title;
 
     const dateElement = document.createElement("p");
+    dateElement.classList.add("timeline-item-date");
     dateElement.textContent = item.date;
 
     // const FullDescription = document.createElement("p");
@@ -20,8 +21,10 @@ dates.map((item)=> {
     // imageElement.setAttribute("src", image);
 
     const summaryElement = document.createElement("p");
+    summaryElement.classList.add("timeline-item-summary");
     summaryElement.textContent = item.summary
     const moreInfo = document.createElement("button");
+    summaryElement.classList.add("timeline-item-more");
     moreInfo.textContent = "READMORE"
     card.append(titleElement, dateElement, summaryElement, moreInfo);
 })
