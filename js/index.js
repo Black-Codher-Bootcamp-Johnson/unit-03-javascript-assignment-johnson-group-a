@@ -1,4 +1,11 @@
 import { dates } from "./data.js";
+
+const h1 = document.createElement('h1');
+   h1.classList.add('animate__animated animate__bounceInLeft');
+   h1.textContent = "Mayme's Bakery";
+   document.body.prepend(h1);
+
+console.log(h1.textContent); 
  
 const timeline = document.querySelector(".timeline")
 dates.map((item)=> {
@@ -10,7 +17,7 @@ dates.map((item)=> {
     titleElement.classList.add("timeline-item-title");
     titleElement.textContent = item.title;
 
-    const dateElement = document.createElement("p");
+    const dateElement = document.createElement("span");
     dateElement.classList.add("timeline-item-date");
     dateElement.textContent = item.date;
 
@@ -45,7 +52,7 @@ function openModal(item){
     modalTitleElement.textContent = item.title
     modalContainer.append(modalTitleElement)
     
-    const modalDateElement = document.createElement('p')
+    const modalDateElement = document.createElement('span')
     modalDateElement.id = 'modal-date'
     modalDateElement.textContent = item.date
     modalContainer.append(modalDateElement)
