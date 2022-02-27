@@ -1,7 +1,8 @@
 import { dates } from "./data.js";
 
 const h1 = document.createElement('h1');
-   h1.classList.add('animate__animated animate__bounceInLeft');
+   h1.classList.add('animate__animated')
+   h1.classList.add('animate__bounceInLeft');
    h1.textContent = "Mayme's Bakery";
    document.body.prepend(h1);
 
@@ -43,6 +44,9 @@ dates.map((item)=> {
 })
 
 function openModal(item){
+    if(document.querySelector("#modal-container")){
+        document.removeChild(document.querySelector("#modal-container"))
+    }
     // container
     const modalContainer = document.createElement('div')
     modalContainer.id = 'modal-container'
