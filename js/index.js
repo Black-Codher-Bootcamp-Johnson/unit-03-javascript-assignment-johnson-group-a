@@ -1,5 +1,7 @@
 import { dates } from "./data.js";
- 
+
+
+
 const timeline = document.querySelector(".timeline")
 dates.map((item)=> {
     const card = document.createElement("div");
@@ -14,11 +16,14 @@ dates.map((item)=> {
     dateElement.classList.add("timeline-item-date");
     dateElement.textContent = item.date;
 
+    // LEAVE IN COMMENTS
     // const FullDescription = document.createElement("p");
     // FullDescriptionElement.textContent = FullDescription;
 
     // const imageElement = document.createElement("img");
     // imageElement.setAttribute("src", image);
+    //     LEAVE IN COMMENTS
+
 
     const summaryElement = document.createElement("p");
     summaryElement.classList.add("timeline-item-summary");
@@ -37,6 +42,7 @@ dates.map((item)=> {
 
 function openModal(item){
     // container
+ 
     const modalContainer = document.createElement('div')
     modalContainer.id = 'modal-container'
 
@@ -71,6 +77,8 @@ function openModal(item){
 
     timeline.appendChild(modalContainer)
 }
+
+
 
 
     // imageElement.setAttribute("src", image);
