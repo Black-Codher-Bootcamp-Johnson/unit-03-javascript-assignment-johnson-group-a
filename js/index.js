@@ -33,7 +33,7 @@ dates.map((item)=> {
     summaryElement.textContent = item.summary
 
     const moreInfo = document.createElement("button");
-    summaryElement.classList.add("timeline-item-more");
+    moreInfo.classList.add("timeline-item-more-info");
     moreInfo.textContent = "READ MORE"
 
     moreInfo.addEventListener('click', function () {
@@ -80,7 +80,7 @@ function openModal(item){
     })
     modalContainer.append(modalClose)
 
-    timeline.appendChild(modalContainer)
+    document.body.appendChild(modalContainer)
 }
 
 
