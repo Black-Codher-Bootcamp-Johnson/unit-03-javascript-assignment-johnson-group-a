@@ -22,7 +22,7 @@ dates.map((item)=> {
     dateElement.classList.add("timeline-item-date");
     dateElement.textContent = item.date;
 
-    // const FullDescription = document.createElement("p");
+    const FullDescription = document.createElement("p");
     // FullDescriptionElement.textContent = FullDescription;
 
     // const imageElement = document.createElement("img");
@@ -81,10 +81,14 @@ function openModal(item){
     modalContainer.append(modalClose)
 
     document.body.appendChild(modalContainer)
+
+
+
+    imageElement.setAttribute("src", image);
 }
+    
 
 
-    // imageElement.setAttribute("src", image);
 
 /**
  *       <div class="timeline-item">
