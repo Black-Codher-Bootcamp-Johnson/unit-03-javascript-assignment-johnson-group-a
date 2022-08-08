@@ -47,10 +47,9 @@
   mix-blend-mode: normal;
   backdrop-filter: blur (15px);
   overflow: hidden;
-  /* display: inline; */
+  display: inline;
  }
  .timeline-item {
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   background-color: #fee19f;
   border: 5px solid rgb(165, 236, 221);
   border-radius: 10px;
@@ -89,11 +88,8 @@
  
  .timeline-item {
   margin-bottom: 50px;
-  /* position: left; */
-  /* @extend %clearfix; */
   transform: translateY(-50px);
   background: peachpuff;
-  /* border: 1px solid black; */
   margin-bottom: 90px;
   box-shadow: 0px 20px 53px -30px rgba(71, 54, 64, 0.567);
   border-radius: 10px;
@@ -127,7 +123,6 @@
   font-weight: bold 300;
   border-radius: (3px 3px 0 0);
   prefix: border-radius;
-  color: rgb(229, 85, 85);
  }
  
  .timeline:before {
@@ -183,8 +178,6 @@
  .timeline-item-more:hover {
   box-shadow: none;
   top: 2px;
-  left: 2px;
-  /* @include prefix(box-shadow, 2px 2px 0 transparent); */
  }
  
  @media screen and (max-width: 768px) {
@@ -196,8 +189,7 @@
   .timeline:before {
     left: 0;
   }
- 
-  /* .timeline-item { */
+
   .timeline-content {
     padding-top: 5px;
     width: 90%;
@@ -221,22 +213,34 @@
     background-color: green;
     z-index: 100;
   }
- 
+
+#modal-full-description {
+  padding-top: 15px;
+  color: black;
+  font-size: 15px;
+  text-align: center;
+  margin: auto;
+  line-height: normal;
+}
+
+#modal-date {
+  font-size: 16px;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+  #modal-image {
+    height: 375px;
+    width: 500px;
+    object-fit: contain;
+}
   img {
     width: 200px;
     height: 150px;
   }
- 
+
   #modal-close-button {
-    width: 249 px;
-    height: 62px;
-    background: blueviolet;
-    mix-blend-mode: normal;
-    border: 1px solid #ff9f55;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    background-color: lightgray;
+    font-size: 12px;
+}
  }
  

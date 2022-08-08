@@ -22,7 +22,7 @@ dates.map((item)=> {
     dateElement.classList.add("timeline-item-date");
     dateElement.textContent = item.date;
 
-    const FullDescription = document.createElement("p");
+    // const FullDescription = document.createElement("p");
     // FullDescriptionElement.textContent = FullDescription;
 
     // const imageElement = document.createElement("img");
