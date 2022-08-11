@@ -160,7 +160,7 @@
  }
  
  .timeline-item-summary {
-  left: 0;
+  color: rgb(74, 74, 209);
  }
  
  .timeline-item-more-info ::before{
