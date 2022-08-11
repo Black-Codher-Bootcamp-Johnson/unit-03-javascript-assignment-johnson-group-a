@@ -44,11 +44,11 @@ dates.map((item)=> {
 })
 
 function openModal(item){
-    if(document.querySelector("#modal-container")){
+    if(document.querySelector("#modal-container")) {
         document.removeChild(document.querySelector("#modal-container"))
-    }
+    }   
     // container
-    const modalContainer = document.createElement('div')
+    const modalContainer = document.createElement('div') 
     modalContainer.id = 'modal-container'
 
     const modalTitleElement = document.createElement('h2')
@@ -74,7 +74,7 @@ function openModal(item){
 
     const modalClose = document.createElement('button')
     modalClose.id ='modal-close-button'
-    modalClose.textContent = 'close'
+    modalClose.textContent = 'CLOSE'
     modalClose.addEventListener('click', function(){
         modalContainer.remove()
     })
@@ -84,7 +84,7 @@ function openModal(item){
 
 
 
-    imageElement.setAttribute("src", image);
+    imageElement.setAttribute("src", item.image);
 }
     
 

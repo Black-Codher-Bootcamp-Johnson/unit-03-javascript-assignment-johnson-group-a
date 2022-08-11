@@ -163,7 +163,7 @@
   left: 0;
  }
  
- .timeline-item-more {
+ .timeline-item-more-info ::before{
   left: 50%;
   padding: 5px 15px;
   text-decoration: none;
@@ -175,7 +175,7 @@
   text-transform: uppercase;
   font-size: 12px;
  }
- .timeline-item-more:hover {
+ .timeline-item-more-info:hover {
   box-shadow: none;
   top: 2px;
  }
