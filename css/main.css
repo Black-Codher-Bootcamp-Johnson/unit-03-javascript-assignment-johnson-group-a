@@ -20,7 +20,11 @@
   font-family: helvetica, sans-serif;
   position: relative;
  }
- .intro {
+ h1  {
+  font-family: 'Dancing Script', cursive;
+  font-size: 70px;
+ }
+ /* .intro {
   background: #dceaf5;
   width: 1250px;
   height: 284px;
@@ -30,7 +34,7 @@
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 25px;
   margin-top: 15px;
-}
+} */
  .h2 {
   width: 100%;
   font-weight: bold;
@@ -153,7 +157,7 @@
   padding: 10px 20px;
   width: fit-content;
   background-color: rgb(212, 242, 210);
-  border: 4px dotted rgb(127, 69, 69);
+  border: 4px bold;
   border-radius: 10px;
   z-index: 1;
   justify-content: right;
@@ -224,8 +228,7 @@
 }
 
 #modal-date {
-  font-size: 16px;
-  font-family: 'Dancing Script', cursive;
+  font-size: bold, 16px;
   text-align: center;
 }
   #modal-image {
@@ -237,7 +240,6 @@
     width: 200px;
     height: 150px;
   }
-
   #modal-close-button {
     background-color: lightgray;
     font-size: 12px;
